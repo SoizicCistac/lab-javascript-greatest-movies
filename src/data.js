@@ -2001,3 +2001,22 @@ const movies = [
     score: 8
   }
 ];
+
+
+function orderAlphabetically(moviesArray) {
+  moviesArrayAlphabeticOrder = [...moviesArray]
+
+  const sortedAlphabeticMovies = moviesArrayAlphabeticOrder.sort((a, b) => {
+      return a.title.localeCompare(b.title)
+  })
+  
+  let alphabeticOrder = []
+
+  for (let i = 0; i < 20; i++) {
+      alphabeticOrder.push({title: sortedAlphabeticMovies[i].title})
+  }
+
+  return alphabeticOrder;
+}
+
+console.log(orderAlphabetically(movies))
